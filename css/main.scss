@@ -55,12 +55,14 @@ html {
 .content {
   margin: 0 auto;
   position: relative;
+  top: -90px;
   width: 50%;
 
   .card {
     background: white;
+    border: 2px solid #f6f6f6;
     border-radius: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   .product__header {
@@ -68,7 +70,6 @@ html {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: -90px;
 
     .logo {
       position: relative;
@@ -111,6 +112,51 @@ html {
             margin-right: 20px;
           }
         }
+      }
+    }
+  }
+
+  .product__stats {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 5%;
+
+    .stat {
+      border-right: 1px solid #d9d9d9;
+      color: $darkGray;
+      display: flex;
+      flex-direction: column;
+      width: 28%;
+      margin-left: 7%;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:nth-child(3) {
+        border-right: none;
+      }
+
+      .feature {
+        color: $black;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+    }
+    .progress {
+      width: 100%;
+      height: 12px;
+      background: #f4f4f4;
+      margin-top: 35px;
+      border-radius: 25px;
+      position: relative;
+      &__fill {
+        width: 76%;
+        height: 12px;
+        background: $medCyan;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 0;
       }
     }
   }
