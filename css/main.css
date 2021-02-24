@@ -138,6 +138,10 @@ table {
 
 /* Start variables */
 /* End variables */
+.modal {
+  display: none;
+}
+
 html {
   font-size: 16px;
   font-family: "Commissioner", sans-serif;

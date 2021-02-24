@@ -9,6 +9,10 @@ $darkGray: hsl(0, 0%, 48%);
 $breakpoint: "1000px";
 /* End variables */
 
+.modal {
+  display: none;
+}
+
 html {
   font-size: 16px;
   font-family: "Commissioner", sans-serif;
