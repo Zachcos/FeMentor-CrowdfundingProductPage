@@ -46,9 +46,17 @@ const GlobalStyle = createGlobalStyle`
     border-spacing: 0;
   }
   html {
-    font-size: 18px;
+    background: #fafafa;
+    font-size: 16px;
+    font-family: "Commissioner", sans-serif;
+    font-weight: 300;
   }
   body {
+  }
+
+  .full-wrap {
+    min-height: 100vh;
+    width: 100vw;
   }
 `;
 
