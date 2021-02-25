@@ -200,6 +200,40 @@ html {
   border: 2px solid #f6f6f6;
   border-radius: 8px;
   margin-bottom: 20px;
+  padding: 0 50px 0;
+}
+
+.content .btn {
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.content .btn__primary {
+  background: #3cb4ac;
+  color: white;
+  padding: 20px 40px;
+}
+
+.content .btn__disabled {
+  background: #cbcbcb;
+  color: white;
+  padding: 20px 40px;
+}
+
+.content .btn__bookmark {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f4f4f4;
+  color: #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 20px;
+}
+
+.content .btn__bookmark img {
+  margin-right: 20px;
 }
 
 .content .product__header {
@@ -241,34 +275,7 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto 50px;
-  width: 85%;
-}
-
-.content .product__header .buttons .btn {
-  border-radius: 50px;
-  font-weight: 500;
-}
-
-.content .product__header .buttons .btn__primary {
-  background: #3cb4ac;
-  color: white;
-  padding: 20px 40px;
-}
-
-.content .product__header .buttons .btn__bookmark {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #f4f4f4;
-  color: #777;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-right: 20px;
-}
-
-.content .product__header .buttons .btn__bookmark img {
-  margin-right: 20px;
+  width: 93%;
 }
 
 .content .product__stats {
@@ -326,5 +333,104 @@ html {
   left: 0;
   top: 0;
   margin-top: 0;
+}
+
+.content .product__about .title {
+  margin: 40px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.content .product__about .desc {
+  color: #7a7a7a;
+  line-height: 1.875rem;
+  margin-bottom: 20px;
+}
+
+.content .product__about .pledge {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.content .product__about .pledge.oos {
+  position: relative;
+}
+
+.content .product__about .pledge.oos:after {
+  background: white;
+  border-radius: 12px;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.content .product__about .pledge_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.content .product__about .pledge_top .pledge__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.content .product__about .pledge_top .pledge__price {
+  color: #3cb4ac;
+  font-size: 0.9rem;
+}
+
+.content .product__about .pledge_mid {
+  color: #7a7a7a;
+  line-height: 2rem;
+  margin-bottom: 25px;
+}
+
+.content .product__about .pledge_bot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .product__about .pledge_bot .pledge__remaining {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #7a7a7a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .product__about .pledge_bot .pledge__remaining .em {
+  color: black;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.content .product__about .pledge_bot .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 17px 25px;
+  width: 150px;
 }
 /*# sourceMappingURL=main.css.map */

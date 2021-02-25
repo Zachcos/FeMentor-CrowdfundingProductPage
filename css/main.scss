@@ -63,6 +63,32 @@ html {
     border: 2px solid #f6f6f6;
     border-radius: 8px;
     margin-bottom: 20px;
+    padding: 0 50px 0;
+  }
+
+  .btn {
+    border-radius: 50px;
+    font-weight: 500;
+    &__primary {
+      background: $medCyan;
+      color: white;
+      padding: 20px 40px;
+    }
+    &__disabled {
+      background: #cbcbcb;
+      color: white;
+      padding: 20px 40px;
+    }
+    &__bookmark {
+      align-items: center;
+      background: #f4f4f4;
+      color: #777;
+      display: flex;
+      padding-right: 20px;
+      img {
+        margin-right: 20px;
+      }
+    }
   }
 
   .product__header {
@@ -92,27 +118,7 @@ html {
       display: flex;
       justify-content: space-between;
       margin: 0 auto 50px;
-      width: 85%;
-
-      .btn {
-        border-radius: 50px;
-        font-weight: 500;
-        &__primary {
-          background: $medCyan;
-          color: white;
-          padding: 20px 40px;
-        }
-        &__bookmark {
-          align-items: center;
-          background: #f4f4f4;
-          color: #777;
-          display: flex;
-          padding-right: 20px;
-          img {
-            margin-right: 20px;
-          }
-        }
-      }
+      width: 93%;
     }
   }
 
@@ -157,6 +163,83 @@ html {
         left: 0;
         top: 0;
         margin-top: 0;
+      }
+    }
+  }
+
+  .product__about {
+    .title {
+      margin: 40px 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .desc {
+      color: $darkGray;
+      line-height: 1.875rem;
+      margin-bottom: 20px;
+    }
+
+    .pledge {
+      border: 1px solid lighten($color: $darkGray, $amount: 40);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 20px;
+
+      &.oos {
+        position: relative;
+        &:after {
+          background: white;
+          border-radius: 12px;
+          content: "";
+          height: 100%;
+          left: 0;
+          opacity: 0.5;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+      }
+
+      &_top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        .pledge__title {
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+        .pledge__price {
+          color: $medCyan;
+          font-size: 0.9rem;
+        }
+      }
+      &_mid {
+        color: $darkGray;
+        line-height: 2rem;
+        margin-bottom: 25px;
+      }
+      &_bot {
+        display: flex;
+        justify-content: space-between;
+        .pledge__remaining {
+          align-items: center;
+          color: $darkGray;
+          display: flex;
+          .em {
+            color: $black;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-right: 12px;
+          }
+        }
+        .btn {
+          display: flex;
+          font-size: 0.8rem;
+          justify-content: center;
+          padding: 17px 25px;
+          width: 150px;
+        }
       }
     }
   }
