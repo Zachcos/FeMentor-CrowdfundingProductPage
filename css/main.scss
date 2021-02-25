@@ -69,10 +69,15 @@ html {
   .btn {
     border-radius: 50px;
     font-weight: 500;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
     &__primary {
       background: $medCyan;
       color: white;
       padding: 20px 40px;
+      &:hover {
+        background: $darkCyan;
+      }
     }
     &__disabled {
       background: #cbcbcb;
@@ -85,8 +90,18 @@ html {
       color: #777;
       display: flex;
       padding-right: 20px;
-      img {
+      svg {
         margin-right: 20px;
+      }
+      &:hover {
+        svg {
+          g {
+            circle {
+              transition: all 0.2s ease-out;
+              fill: #707070;
+            }
+          }
+        }
       }
     }
   }

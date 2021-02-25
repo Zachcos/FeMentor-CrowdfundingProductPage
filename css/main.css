@@ -206,12 +206,19 @@ html {
 .content .btn {
   border-radius: 50px;
   font-weight: 500;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
 }
 
 .content .btn__primary {
   background: #3cb4ac;
   color: white;
   padding: 20px 40px;
+}
+
+.content .btn__primary:hover {
+  background: #147b74;
 }
 
 .content .btn__disabled {
@@ -232,8 +239,14 @@ html {
   padding-right: 20px;
 }
 
-.content .btn__bookmark img {
+.content .btn__bookmark svg {
   margin-right: 20px;
+}
+
+.content .btn__bookmark:hover svg g circle {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  fill: #707070;
 }
 
 .content .product__header {
