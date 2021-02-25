@@ -48,6 +48,9 @@ html {
       color: white;
       font-size: 0.8rem;
       list-style: none;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

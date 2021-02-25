@@ -188,6 +188,10 @@ html {
   list-style: none;
 }
 
+.hero nav li:hover {
+  cursor: pointer;
+}
+
 .content {
   margin: 0 auto;
   position: relative;
