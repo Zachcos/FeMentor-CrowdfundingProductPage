@@ -82,6 +82,80 @@ const StatsCard = styled.div`
   }
 `;
 
+const PledgeCard = styled.div`
+  .title {
+    margin: 40px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  .desc {
+    color: ${color.darkGray};
+    line-height: 1.875rem;
+    margin-bottom: 40px;
+  }
+  .pledge {
+    border: 1px solid ${color.darkGray};
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 20px;
+
+    &.oos {
+      position: relative;
+      &:after {
+        background: white;
+        border-radius: 12px;
+        content: '';
+        height: 100%;
+        left: 0;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+    &_top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      .pledge__title {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .pledge__price {
+        color: $medCyan;
+        font-size: 0.9rem;
+      }
+    }
+    &_mid {
+      color: $darkGray;
+      line-height: 2rem;
+      margin-bottom: 25px;
+    }
+    &_bot {
+      display: flex;
+      justify-content: space-between;
+      .pledge__remaining {
+        align-items: center;
+        color: $darkGray;
+        display: flex;
+        .em {
+          color: $black;
+          font-size: 2rem;
+          font-weight: 700;
+          margin-right: 12px;
+        }
+      }
+      .btn {
+        display: flex;
+        font-size: 0.8rem;
+        justify-content: center;
+        padding: 17px 25px;
+        width: 150px;
+      }
+    }
+  }
+`;
+
 export default function Content() {
   return (
     <ContentContainer>
@@ -127,6 +201,84 @@ export default function Content() {
             <div className="progress progress__fill" />
           </div>
         </StatsCard>
+      </Card>
+      <Card>
+        <PledgeCard>
+          <div className="title">About this project</div>
+          <div className="desc">
+            The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
+            platform that elevates your screen to a more comfortable viewing
+            height. Placing your monitor at eye level has the potential to
+            improve your posture and make you more comfortable while at work,
+            helping you stay focused on the task at hand. <br />
+            <br />
+            Featuring artisan craftsmanship, the simplicity of design creates
+            extra desk space below your computer to allow notepads, pens, and
+            USB sticks to be stored under the stand.
+          </div>
+          <div className="pledge">
+            <div className="pledge_top">
+              <div className="pledge__title">Bamboo Stand</div>
+              <div className="pledge__price">Pledge $25 or more</div>
+            </div>
+            <div className="pledge_mid">
+              <div className="pledge__desc">
+                You get an ergonomic stand made of natural bamboo. You've helped
+                us launch our promotional campaign, and you’ll be added to a
+                special Backer member list.
+              </div>
+            </div>
+            <div className="pledge_bot">
+              <div className="pledge__remaining">
+                <div className="em">101</div>
+                left
+              </div>
+              <div className="btn btn__primary">Select Reward</div>
+            </div>
+          </div>
+
+          <div className="pledge">
+            <div className="pledge_top">
+              <div className="pledge__title">Black Edition Stand</div>
+              <div className="pledge__price">Pledge $75 or more</div>
+            </div>
+            <div className="pledge_mid">
+              <div className="pledge__desc">
+                You get a Black Special Edition computer stand and a personal
+                thank you. You’ll be added to our Backer member list. Shipping
+                is included.
+              </div>
+            </div>
+            <div className="pledge_bot">
+              <div className="pledge__remaining">
+                <div className="em">64</div>
+                left
+              </div>
+              <div className="btn btn__primary">Select Reward</div>
+            </div>
+          </div>
+
+          <div className="pledge oos">
+            <div className="pledge_top">
+              <div className="pledge__title">Mahogany Special Edition</div>
+              <div className="pledge__price">Pledge $200 or more</div>
+            </div>
+            <div className="pledge_mid">
+              <div className="pledge__desc">
+                You get two Special Edition Mahogany stands, a Backer T-Shirt,
+                and a personal thank you. You’ll be added to our Backer member
+                list. Shipping is included.
+              </div>
+            </div>
+            <div className="pledge_bot">
+              <div className="pledge__remaining">
+                <div className="em">0</div>
+                left
+              </div>
+              <div className="btn btn__disabled">Out of Stock</div>
+            </div>
+          </div>
+        </PledgeCard>
       </Card>
     </ContentContainer>
   );
