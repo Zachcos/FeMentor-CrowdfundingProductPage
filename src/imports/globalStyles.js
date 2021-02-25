@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { color } from './variables';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -57,6 +58,46 @@ const GlobalStyle = createGlobalStyle`
   .full-wrap {
     min-height: 100vh;
     width: 100vw;
+  }
+
+  .btn {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease-out;
+    &__primary {
+      background: ${color.medCyan};
+      color: white;
+      padding: 20px 40px;
+      &:hover {
+        background: ${color.darkCyan};
+      }
+    }
+    &__disabled {
+      background: #cbcbcb;
+      color: white;
+      padding: 20px 40px;
+    }
+    &__bookmark {
+      align-items: center;
+      background: #f4f4f4;
+      color: #777;
+      display: flex;
+      padding-right: 20px;
+      svg {
+        margin-right: 20px;
+      }
+      &:hover {
+        svg {
+          g {
+            circle {
+              transition: all 0.2s ease-out;
+              fill: #707070;
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
