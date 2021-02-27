@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { color } from '../imports/variables';
 
@@ -36,6 +38,18 @@ const AboutCard = styled.div`
     justify-content: space-between;
     margin: 0 auto 50px;
     width: 93%;
+
+    .bookmarked {
+      color: ${color.darkCyan};
+      svg g {
+        circle {
+          fill: ${color.darkCyan};
+        }
+        path {
+          fill: white;
+        }
+      }
+    }
   }
 `;
 
@@ -157,6 +171,8 @@ const PledgeCard = styled.div`
 `;
 
 export default function Content() {
+  const [isBookmarked, setBookmarked] = useState(false);
+
   return (
     <ContentContainer>
       <Card>
@@ -171,7 +187,14 @@ export default function Content() {
           </div>
           <div className="buttons">
             <div className="btn btn__primary">Back this project</div>
-            <div className="btn btn__bookmark">
+            <div
+              className={
+                isBookmarked
+                  ? 'btn btn__bookmark bookmarked'
+                  : 'btn btn__bookmark'
+              }
+              onClick={() => setBookmarked(!isBookmarked)}
+            >
               <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fillRule="evenodd">
                   <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
