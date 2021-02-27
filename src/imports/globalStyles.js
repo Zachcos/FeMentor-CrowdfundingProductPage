@@ -55,11 +55,6 @@ const GlobalStyle = createGlobalStyle`
   body {
   }
 
-  .full-wrap {
-    min-height: 100vh;
-    width: 100vw;
-  }
-
   .btn {
     border-radius: 50px;
     cursor: pointer;

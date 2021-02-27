@@ -1,6 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 import GlobalStyles from '../imports/globalStyles';
+
+const FullWrap = styled.div`
+  min-height: 100vh;
+  position: relative;
+  width: 100vw;
+`;
 
 export default function Layout({ children }) {
   return (
@@ -17,7 +24,7 @@ export default function Layout({ children }) {
         <link rel="stylesheet" href="/css/main.css" />
       </Helmet>
       <GlobalStyles />
-      <div className="full-wrap">{children}</div>
+      <FullWrap>{children}</FullWrap>
     </>
   );
 }
