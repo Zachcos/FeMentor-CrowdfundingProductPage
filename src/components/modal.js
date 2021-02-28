@@ -37,7 +37,7 @@ const SuccessContainer = styled.div`
   display: none;
 `;
 
-export default function Modal() {
+export default function Modal({ pledges }) {
   return (
     <ModalOverlay>
       <ContentContainer>
@@ -47,23 +47,9 @@ export default function Modal() {
             Want to support us in bringing Mastercraft Bamboo Monitor Riser out
             in the world?
           </div>
-          <ModalPledge />
-          <div className="pledge">
-            <div className="pledge__top">
-              <div className="dot" />
-              <div className="title">Mahogany Special Edition</div>
-              <div className="amount">Pledge $200 or more</div>
-              <div className="quantity">0 left</div>
-            </div>
-            <div className="desc">
-              You get two Special Edition Mahogany stands, a Backer T-Shirt, and
-              a personal thank you. You’ll be added to our Backer member list.
-              Shipping is included.
-            </div>
-            <div className="pledge__bottom">
-              Enter your pledge $200 Continue
-            </div>
-          </div>
+          {pledges.edges.map((item) => (
+            <ModalPledge data={item.node} key={item.node.id} />
+          ))}
         </Card>
       </ContentContainer>
       <SuccessContainer>
