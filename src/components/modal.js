@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { color } from '../imports/variables';
 
 import Card from './card';
 
