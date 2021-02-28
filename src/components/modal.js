@@ -4,10 +4,11 @@ import { color } from '../imports/variables';
 
 import Card from './card';
 import ModalPledge from './modalPledge';
+import closeBtn from '../../static/images/icon-close-modal.svg';
 
 const ModalOverlay = styled.div`
   background: rgba(0, 0, 0, 0.5);
-  height: 100vh;
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
@@ -22,6 +23,13 @@ const ContentContainer = styled.div`
   top: 175px;
   position: relative;
   width: 730px;
+
+  .closeBtn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
   .card__title {
     font-size: 1.375rem;
     font-weight: 700;
@@ -29,7 +37,8 @@ const ContentContainer = styled.div`
   }
   .card__subtitle {
     color: ${color.darkGray};
-    margin-bottom: 20px;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
   }
 `;
 
@@ -42,6 +51,9 @@ export default function Modal({ pledges }) {
     <ModalOverlay>
       <ContentContainer>
         <Card>
+          <div className="closeBtn">
+            <img src={closeBtn} alt="" />
+          </div>
           <div className="card__title">Back this project</div>
           <div className="card__subtitle">
             Want to support us in bringing Mastercraft Bamboo Monitor Riser out
