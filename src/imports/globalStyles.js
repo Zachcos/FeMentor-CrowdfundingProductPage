@@ -94,6 +94,21 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
+
+  .oos {
+    position: relative;
+    &:after {
+      background: white;
+      border-radius: 12px;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
 `;
 
 export default GlobalStyle;

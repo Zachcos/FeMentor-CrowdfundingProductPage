@@ -7,6 +7,7 @@ const CardContainer = styled.div`
   border-radius: 8px;
   margin-bottom: 20px;
   padding: 0 50px 0;
+  position: relative;
 `;
 
 export default function Card({ children }) {
