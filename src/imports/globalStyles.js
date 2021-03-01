@@ -96,6 +96,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .oos {
+    pointer-events: none;
     position: relative;
     &:after {
       background: white;
