@@ -155,7 +155,7 @@ const PledgeCard = styled.div`
   }
 `;
 
-export default function Content() {
+export default function Content({ handlePledge }) {
   const [isBookmarked, setBookmarked] = useState(false);
 
   return (
@@ -241,7 +241,9 @@ export default function Content() {
                 <div className="em">101</div>
                 left
               </div>
-              <div className="btn btn__primary">Select Reward</div>
+              <div className="btn btn__primary" onClick={handlePledge}>
+                Select Reward
+              </div>
             </div>
           </div>
 
@@ -262,7 +264,9 @@ export default function Content() {
                 <div className="em">64</div>
                 left
               </div>
-              <div className="btn btn__primary">Select Reward</div>
+              <div className="btn btn__primary" onClick={handlePledge}>
+                Select Reward
+              </div>
             </div>
           </div>
 

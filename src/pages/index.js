@@ -5,12 +5,18 @@ import Hero from '../components/hero';
 import Content from '../components/content';
 import Modal from '../components/modal';
 
-export default function Home({ data }) {
+export default function Home({ data, handlePledge }) {
+  const [isModalShown, setModalShown] = useState(false);
+
+  const submitPledge = () => {
+    setModalShown(true);
+  };
+
   return (
     <>
-      <Modal pledges={data.modalPledges} />
+      {isModalShown ? <Modal pledges={data.modalPledges} /> : ''}
       <Hero />
-      <Content />
+      <Content handlePledge={submitPledge} />
     </>
   );
 }
