@@ -116,6 +116,10 @@ const Pledge = styled.div`
         outline: none;
         padding: 12px 5px 12px 10px;
         width: 60px;
+        &::placeholder {
+          color: ${color.black};
+          opacity: 1;
+        }
       }
     }
     .btn {
