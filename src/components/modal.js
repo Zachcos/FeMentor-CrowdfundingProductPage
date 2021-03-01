@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { color } from '../imports/variables';
 
@@ -47,6 +47,12 @@ const SuccessContainer = styled.div`
 `;
 
 export default function Modal({ pledges }) {
+  const [isSelected, setSelected] = useState('');
+
+  const handleClick = (id) => {
+    setSelected(id);
+  };
+
   return (
     <ModalOverlay>
       <ContentContainer>
@@ -60,7 +66,12 @@ export default function Modal({ pledges }) {
             in the world?
           </div>
           {pledges.edges.map((item) => (
-            <ModalPledge data={item.node} key={item.node.id} />
+            <ModalPledge
+              data={item.node}
+              key={item.node.id}
+              onClick={() => handleClick(item.node.id)}
+              currentSelected={isSelected}
+            />
           ))}
         </Card>
       </ContentContainer>
