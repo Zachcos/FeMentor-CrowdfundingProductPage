@@ -26,6 +26,7 @@ const ContentContainer = styled.div`
   width: 730px;
 
   .closeBtn {
+    cursor: pointer;
     position: absolute;
     right: 30px;
     top: 30px;
@@ -81,7 +82,7 @@ const SuccessContainer = styled.div`
   }
 `;
 
-export default function Modal({ pledges }) {
+export default function Modal({ pledges, handleClose }) {
   const [isSelected, setSelected] = useState('');
   const [isSubmitted, setSubmitted] = useState(false);
 
@@ -100,7 +101,7 @@ export default function Modal({ pledges }) {
       {!isSubmitted ? (
         <ContentContainer>
           <Card>
-            <div className="closeBtn">
+            <div className="closeBtn" onClick={handleClose}>
               <img src={closeBtn} alt="" />
             </div>
             <div className="card__title">Back this project</div>
@@ -132,7 +133,9 @@ export default function Modal({ pledges }) {
                 Bamboo Monitor Riser worldwide. You will get an email once our
                 campaign is completed.
               </div>
-              <div className="btn btn__primary">Got it!</div>
+              <div className="btn btn__primary" onClick={handleClose}>
+                Got it!
+              </div>
             </div>
           </Card>
         </SuccessContainer>

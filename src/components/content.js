@@ -108,7 +108,7 @@ const PledgeCard = styled.div`
     margin-bottom: 40px;
   }
   .pledge {
-    border: 1px solid ${color.darkGray};
+    border: 1px solid #dadada;
     border-radius: 8px;
     padding: 30px;
     margin-bottom: 20px;
@@ -121,7 +121,7 @@ const PledgeCard = styled.div`
         font-weight: 700;
       }
       .pledge__price {
-        color: $medCyan;
+        color: ${color.medCyan};
         font-size: 0.9rem;
       }
     }
@@ -171,7 +171,9 @@ export default function Content({ handlePledge }) {
             strain.
           </div>
           <div className="buttons">
-            <div className="btn btn__primary">Back this project</div>
+            <div className="btn btn__primary" onClick={handlePledge}>
+              Back this project
+            </div>
             <div
               className={
                 isBookmarked
