@@ -10,6 +10,14 @@ const Pledge = styled.div`
   &:last-child {
     margin-bottom: 50px;
   }
+  &:hover {
+    .dot {
+      border-color: ${color.medCyan};
+    }
+    .pledge__top .title {
+      color: ${color.medCyan};
+    }
+  }
   &.selected {
     border-color: ${color.medCyan};
     padding-bottom: 10px;
@@ -89,6 +97,10 @@ const Pledge = styled.div`
       border: 2px solid #ececec;
       box-sizing: border-box;
       color: ${color.darkGray};
+      &:focus-within {
+        border-color: ${color.medCyan};
+      }
+      cursor: pointer;
       font-size: 0.9rem;
       font-weight: 700;
       margin-left: auto;
