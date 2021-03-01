@@ -129,7 +129,12 @@ const Pledge = styled.div`
   }
 `;
 
-export default function ModalPledge({ data, onClick, currentSelected }) {
+export default function ModalPledge({
+  data,
+  onClick,
+  submitPledge,
+  currentSelected,
+}) {
   return (
     <Pledge
       className={
@@ -156,7 +161,9 @@ export default function ModalPledge({ data, onClick, currentSelected }) {
           $
           <input type="text" placeholder={data.minAmount} />
         </div>
-        <div className="btn btn__primary">Continue</div>
+        <div className="btn btn__primary" onClick={submitPledge}>
+          Continue
+        </div>
       </div>
     </Pledge>
   );
