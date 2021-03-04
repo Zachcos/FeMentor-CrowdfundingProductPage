@@ -9,6 +9,4 @@ const size = {
   phone: '800px',
 };
 
-export const device = {
-  phone: `(max-width: ${size.phone})`,
-};
+export const device = `(max-width: ${size.phone})`;
