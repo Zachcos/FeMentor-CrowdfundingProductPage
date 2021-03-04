@@ -6,7 +6,7 @@ export const color = {
 };
 
 const size = {
-  phone: '600px',
+  phone: '800px',
 };
 
 export const device = {
