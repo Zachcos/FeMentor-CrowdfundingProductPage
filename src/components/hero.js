@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { color, device } from '../imports/variables';
 
 import heroBg from '../../static/images/image-hero-desktop.jpg';
 import heroBgMobile from '../../static/images/image-hero-mobile.jpg';
 import hamburger from '../../static/images/icon-hamburger.svg';
+import close from '../../static/images/icon-close-menu.svg';
 import logo from '../../static/images/logo.svg';
 
 const HeroContainer = styled.div`
@@ -38,6 +39,7 @@ const HeroContainer = styled.div`
     .navBtn {
       display: none;
       @media ${device} {
+        cursor: pointer;
         display: inline-block;
         height: 15px;
         margin-left: auto;
@@ -59,6 +61,7 @@ const HeroContainer = styled.div`
     @media ${device} {
       background: white;
       border-radius: 8px;
+      display: none;
       flex-direction: column;
       height: 100%;
       height: 200px;
@@ -69,6 +72,9 @@ const HeroContainer = styled.div`
       -webkit-box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
       box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
+      &.showModal {
+        display: flex;
+      }
     }
     li {
       color: white;
@@ -95,16 +101,17 @@ const HeroContainer = styled.div`
 `;
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <HeroContainer>
       <div className="topbar">
         <div className="logo">
           <img src={logo} alt="" />
         </div>
-        <div className="navBtn">
-          <img src={hamburger} alt="" />
+        <div className="navBtn" onClick={() => setIsOpen(!isOpen)}>
+          <img src={isOpen ? close : hamburger} alt="" />
         </div>
-        <nav>
+        <nav className={isOpen ? 'showModal' : ''}>
           <li>About</li>
           <li>Discover</li>
           <li>Get Started</li>
