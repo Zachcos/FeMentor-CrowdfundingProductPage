@@ -178,11 +178,17 @@ const PledgeCard = styled.div`
     margin: 40px 0;
     font-size: 1.25rem;
     font-weight: 700;
+    @media ${device} {
+      font-size: 1.1rem;
+    }
   }
   .desc {
     color: ${color.darkGray};
     line-height: 1.875rem;
     margin-bottom: 40px;
+    @media ${device} {
+      font-size: 0.875rem;
+    }
   }
   .pledge {
     border: 1px solid #dadada;
@@ -193,29 +199,49 @@ const PledgeCard = styled.div`
       display: flex;
       justify-content: space-between;
       margin-bottom: 25px;
+      @media ${device} {
+        flex-direction: column;
+      }
       .pledge__title {
         font-size: 1.1rem;
         font-weight: 700;
+        @media ${device} {
+          font-size: 0.9rem;
+          margin-bottom: 10px;
+        }
       }
       .pledge__price {
         color: ${color.medCyan};
         font-size: 0.9rem;
+        @media ${device} {
+          font-size: 0.8rem;
+        }
       }
     }
     &_mid {
-      color: $darkGray;
+      color: ${color.darkGray};
       line-height: 2rem;
       margin-bottom: 25px;
+      @media ${device} {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+      }
     }
     &_bot {
       display: flex;
       justify-content: space-between;
+      @media ${device} {
+        flex-direction: column;
+      }
       .pledge__remaining {
         align-items: center;
-        color: $darkGray;
+        color: ${color.darkGray};
         display: flex;
+        @media ${device} {
+          margin-bottom: 30px;
+        }
         .em {
-          color: $black;
+          color: ${color.black};
           font-size: 2rem;
           font-weight: 700;
           margin-right: 12px;
@@ -227,6 +253,9 @@ const PledgeCard = styled.div`
         justify-content: center;
         padding: 17px 25px;
         width: 150px;
+        @media ${device} {
+          width: 100px;
+        }
       }
     }
   }
