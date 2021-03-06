@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { color } from '../imports/variables';
+import { color, device } from '../imports/variables';
 
 import Card from './card';
 import companyLogo from '../../static/images/logo-mastercraft.svg';
@@ -12,6 +12,10 @@ const ContentContainer = styled.div`
   position: relative;
   top: -90px;
   width: 730px;
+  @media screen and (${device}) {
+    min-width: 350px;
+    width: 90%;
+  }
 `;
 
 const AboutCard = styled.div`
@@ -19,6 +23,9 @@ const AboutCard = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  @media screen and (${device}) {
+    text-align: center;
+  }
   .logo {
     position: relative;
     top: -25px;
@@ -27,17 +34,56 @@ const AboutCard = styled.div`
     font-size: 1.7rem;
     font-weight: 700;
     margin-bottom: 20px;
+    @media screen and (${device}) {
+      font-size: 1.25rem;
+      line-height: 1.6rem;
+    }
   }
   .desc {
-    color: $darkGray;
+    color: ${color.darkGray};
     font-size: 0.95rem;
     margin-bottom: 50px;
+    @media screen and (${device}) {
+      font-size: 0.8rem;
+      line-height: 1.4rem;
+    }
   }
   .buttons {
     display: flex;
     justify-content: space-between;
     margin: 0 auto 50px;
     width: 93%;
+    .btn {
+      &__bookmark {
+        align-items: center;
+        background: #f4f4f4;
+        color: #777;
+        display: flex;
+        padding-right: 20px;
+        @media screen and (${device}) {
+          padding-right: 0;
+          .btnText {
+            display: none;
+          }
+        }
+        svg {
+          margin-right: 20px;
+          @media screen and (${device}) {
+            margin-right: 0;
+          }
+        }
+        &:hover {
+          svg {
+            g {
+              circle {
+                transition: all 0.2s ease-out;
+                fill: #707070;
+              }
+            }
+          }
+        }
+      }
+    }
 
     .bookmarked {
       color: ${color.darkCyan};
@@ -188,7 +234,7 @@ export default function Content({ handlePledge }) {
                   <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
                 </g>
               </svg>
-              Bookmark
+              <div className="btnText">Bookmark</div>
             </div>
           </div>
         </AboutCard>
