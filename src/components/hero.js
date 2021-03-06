@@ -4,6 +4,7 @@ import { device } from '../imports/variables';
 
 import heroBg from '../../static/images/image-hero-desktop.jpg';
 import heroBgMobile from '../../static/images/image-hero-mobile.jpg';
+import hamburger from '../../static/images/icon-hamburger.svg';
 import logo from '../../static/images/logo.svg';
 
 const HeroContainer = styled.div`
@@ -22,6 +23,7 @@ const HeroContainer = styled.div`
       url(${heroBgMobile}) no-repeat;
     background-size: cover;
     background-position: top center;
+    padding-top: 35px;
     width: 100%;
   }
 
@@ -36,9 +38,9 @@ const HeroContainer = styled.div`
       display: none;
       @media screen and (${device}) {
         display: inline-block;
-        height: 25px;
+        height: 15px;
         margin-left: auto;
-        width: 25px;
+        width: 15px;
         img {
           width: 100%;
           height: 100%;
@@ -74,7 +76,7 @@ export default function Hero() {
           <img src={logo} alt="" />
         </div>
         <div className="navBtn">
-          <img src="../../static/images/icon-hamburger.svg" alt="" />
+          <img src={hamburger} alt="" />
         </div>
         <nav>
           <li>About</li>
