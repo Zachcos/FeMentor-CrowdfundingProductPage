@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { color } from '../imports/variables';
+import { color, device } from '../imports/variables';
 
 import Card from './card';
 import ModalPledge from './modalPledge';
@@ -24,6 +24,9 @@ const ContentContainer = styled.div`
   top: 175px;
   position: relative;
   width: 730px;
+  @media ${device} {
+    width: 90%;
+  }
 
   .closeBtn {
     cursor: pointer;
@@ -36,11 +39,19 @@ const ContentContainer = styled.div`
     font-size: 1.375rem;
     font-weight: 700;
     margin: 50px 0 20px;
+    @media ${device} {
+      font-size: 1.1rem;
+      margin: 30px 0 20px;
+    }
   }
   .card__subtitle {
     color: ${color.darkGray};
     font-size: 0.95rem;
     margin-bottom: 30px;
+    @media ${device} {
+      font-size: 0.875rem;
+      line-height: 1.4rem;
+    }
   }
 `;
 
