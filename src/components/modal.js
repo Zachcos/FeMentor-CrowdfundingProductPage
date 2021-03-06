@@ -112,7 +112,7 @@ const SuccessContainer = styled.div`
 
 export default function Modal({ pledges, handleClose }) {
   const [isSelected, setSelected] = useState('');
-  const [isSubmitted, setSubmitted] = useState(true);
+  const [isSubmitted, setSubmitted] = useState(false);
 
   const handleClick = (id) => {
     setSelected(id);
