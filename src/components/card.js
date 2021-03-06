@@ -9,7 +9,7 @@ const CardContainer = styled.div`
   margin-bottom: 20px;
   padding: 0 50px 0;
   position: relative;
-  @media screen and (${device}) {
+  @media ${device} {
     padding: 0 25px 0;
   }
 `;

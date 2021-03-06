@@ -14,7 +14,7 @@ const HeroContainer = styled.div`
   height: 400px;
   padding-top: 50px;
   width: 100%;
-  @media screen and (${device}) {
+  @media ${device} {
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.7) 0%,
@@ -32,12 +32,12 @@ const HeroContainer = styled.div`
     display: flex;
     margin: 0 auto;
     width: 80%;
-    @media screen and (${device}) {
+    @media ${device} {
       width: 90%;
     }
     .navBtn {
       display: none;
-      @media screen and (${device}) {
+      @media ${device} {
         display: inline-block;
         height: 15px;
         margin-left: auto;
@@ -63,7 +63,7 @@ const HeroContainer = styled.div`
         cursor: pointer;
       }
     }
-    @media screen and (${device}) {
+    @media ${device} {
       display: none;
     }
   }

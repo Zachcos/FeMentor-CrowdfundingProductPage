@@ -12,7 +12,7 @@ const ContentContainer = styled.div`
   position: relative;
   top: -90px;
   width: 730px;
-  @media screen and (${device}) {
+  @media ${device} {
     min-width: 350px;
     width: 90%;
   }
@@ -23,7 +23,7 @@ const AboutCard = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  @media screen and (${device}) {
+  @media ${device} {
     text-align: center;
   }
   .logo {
@@ -34,7 +34,7 @@ const AboutCard = styled.div`
     font-size: 1.7rem;
     font-weight: 700;
     margin-bottom: 20px;
-    @media screen and (${device}) {
+    @media ${device} {
       font-size: 1.25rem;
       line-height: 1.6rem;
     }
@@ -43,7 +43,7 @@ const AboutCard = styled.div`
     color: ${color.darkGray};
     font-size: 0.95rem;
     margin-bottom: 50px;
-    @media screen and (${device}) {
+    @media ${device} {
       font-size: 0.8rem;
       line-height: 1.4rem;
     }
@@ -60,7 +60,7 @@ const AboutCard = styled.div`
         color: #777;
         display: flex;
         padding-right: 20px;
-        @media screen and (${device}) {
+        @media ${device} {
           padding-right: 0;
           .btnText {
             display: none;
@@ -68,7 +68,7 @@ const AboutCard = styled.div`
         }
         svg {
           margin-right: 20px;
-          @media screen and (${device}) {
+          @media ${device} {
             margin-right: 0;
           }
         }
