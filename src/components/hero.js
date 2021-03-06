@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { device } from '../imports/variables';
+import { color, device } from '../imports/variables';
 
 import heroBg from '../../static/images/image-hero-desktop.jpg';
 import heroBgMobile from '../../static/images/image-hero-mobile.jpg';
@@ -54,17 +54,42 @@ const HeroContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin-left: auto;
+    position: relative;
     width: 225px;
+    @media ${device} {
+      background: white;
+      border-radius: 8px;
+      flex-direction: column;
+      height: 100%;
+      height: 200px;
+      position: absolute;
+      top: 100px;
+      width: 90%;
+      z-index: 10;
+      -webkit-box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
+      box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.4);
+    }
     li {
       color: white;
       font-size: 0.8rem;
       list-style: none;
+      @media ${device} {
+        align-items: center;
+        border-bottom: 1px solid #d9d9d9;
+        color: ${color.black};
+        display: flex;
+        font-size: 1.1rem;
+        font-weight: 500;
+        height: 33.333%;
+        padding-left: 20px;
+        &:nth-child(3) {
+          border: none;
+        }
+      }
       &:hover {
         cursor: pointer;
       }
-    }
-    @media ${device} {
-      display: none;
     }
   }
 `;
