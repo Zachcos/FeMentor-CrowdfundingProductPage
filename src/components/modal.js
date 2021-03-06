@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { color, device } from '../imports/variables';
@@ -60,6 +62,10 @@ const SuccessContainer = styled.div`
   top: 500px;
   position: relative;
   width: 550px;
+  @media ${device} {
+    text-align: center;
+    width: 90%;
+  }
   .inside {
     display: flex;
     flex-direction: column;
@@ -68,6 +74,10 @@ const SuccessContainer = styled.div`
       margin: 40px 0;
       height: 90px;
       width: 90px;
+      @media ${device} {
+        height: 75px;
+        width: 75px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -77,6 +87,10 @@ const SuccessContainer = styled.div`
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 20px;
+      @media ${device} {
+        font-size: 1.2rem;
+        margin-bottom: 35px;
+      }
     }
     .desc {
       color: ${color.darkGray};
@@ -84,6 +98,9 @@ const SuccessContainer = styled.div`
       line-height: 1.7rem;
       margin-bottom: 40px;
       text-align: center;
+      @media ${device} {
+        font-size: 0.875rem;
+      }
     }
     .btn {
       font-size: 0.9rem;
@@ -95,7 +112,7 @@ const SuccessContainer = styled.div`
 
 export default function Modal({ pledges, handleClose }) {
   const [isSelected, setSelected] = useState('');
-  const [isSubmitted, setSubmitted] = useState(false);
+  const [isSubmitted, setSubmitted] = useState(true);
 
   const handleClick = (id) => {
     setSelected(id);
