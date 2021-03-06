@@ -23,6 +23,7 @@ const HeroContainer = styled.div`
       url(${heroBgMobile}) no-repeat;
     background-size: cover;
     background-position: top center;
+    height: 300px;
     padding-top: 35px;
     width: 100%;
   }
