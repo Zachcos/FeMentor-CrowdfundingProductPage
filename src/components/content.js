@@ -103,24 +103,55 @@ const StatsCard = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 50px 5%;
+  @media ${device} {
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+  }
   .stat {
     border-right: 1px solid #d9d9d9;
-    color: $darkGray;
+    color: ${color.darkGray};
     display: flex;
     flex-direction: column;
     width: 28%;
     margin-left: 7%;
+    @media ${device} {
+      align-items: center;
+      border-right: none;
+      font-size: 0.8rem;
+      margin-left: 0;
+      margin-bottom: 40px;
+      position: relative;
+      width: 100%;
+      &:after {
+        content: '';
+        width: 30%;
+        height: 1px;
+        background: #d9d9d9;
+        position: absolute;
+        bottom: -20px;
+      }
+    }
     &:first-child {
       margin-left: 0;
     }
     &:nth-child(3) {
       border-right: none;
+      @media ${device} {
+        margin-bottom: 0;
+        &:after {
+          content: none;
+        }
+      }
     }
     .feature {
-      color: $black;
+      color: ${color.black};
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 15px;
+      @media ${device} {
+        margin-bottom: 5px;
+      }
     }
   }
   .progress {
